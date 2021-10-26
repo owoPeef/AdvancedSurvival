@@ -14,15 +14,19 @@ import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.owopeef.advancedsurvival.setup.Registration;
 
 import java.util.stream.Collectors;
 
-@Mod("advancedsurvival")
+@Mod(AdvancedSurvival.MODID)
 public class AdvancedSurvival
 {
+    public static final String MODID = "advancedsurvival";
+
     private static final Logger LOGGER = LogManager.getLogger();
 
     public AdvancedSurvival() {
+        Registration.register();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
@@ -49,13 +53,5 @@ public class AdvancedSurvival
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         LOGGER.info("HELLO from server starting");
-    }
-
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-            LOGGER.info("HELLO from Register Block");
-        }
     }
 }
