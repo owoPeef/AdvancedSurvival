@@ -1,15 +1,14 @@
 modLoader="javafml"
 loaderVersion="[37,)"
 license="MIT"
-#issueTrackerURL="https://change.me.to.your.issue.tracker.example.invalid/" #optional
+issueTrackerURL="https://github.com/owoPeef/AdvancedSurvival/issues/"
 [[mods]]
 modId="advancedsurvival"
-version="1.0"
+version="0.5"
 displayName="Advanced Survival"
 # A URL to query for updates for this mod. See the JSON update specification https://mcforge.readthedocs.io/en/latest/gettingstarted/autoupdate/
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-# A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
+#updateJSONURL="https://api.github.com/repos/owoPeef/AdvancedSurvival/releases"
+displayURL="https://github.com/owoPeef/AdvancedSurvival/releases"
 logoFile="advancedsurvival.png"
 credits="Only one person - im"
 authors="owoPeef"
